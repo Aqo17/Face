@@ -9,14 +9,14 @@ moodInput.addEventListener("input", function() {
         // smile (default)
         mouth.style.height = "50px";
         mouth.style.borderRadius ="0 0 50px 50px"
-        mouth.style.background ="black"
+        mouth.style.background ="white"
         mouth.style.top = ""
         mouth.style.bottom = "40px"
     } else if (mood === "sad"){
         // Sad face (frown)
         mouth.style.height = "50px"
         mouth.style.borderRadius = "50px 50px 0 0"
-        mouth.style.background = "black"
+        mouth.style.background = "white"
         mouth.style.top = "110px"
         mouth.style.bottom = ""
     } else if (mood === "angry"){

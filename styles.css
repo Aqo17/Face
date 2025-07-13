@@ -23,7 +23,7 @@ body{
 .eye{
     width: 25px;
     height: 25px;
-    background: white;
+    background: red;
     border-radius: 50px;
     position: absolute;
     top: 60px;
