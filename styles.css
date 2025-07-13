@@ -13,7 +13,7 @@ body{
 .face{
     width: 200px;
     height: 200px;
-    background: #ffe0bd;
+    background: black;
     border-radius: 50%;
     margin: 0 auto;
     position: relative;
@@ -23,7 +23,7 @@ body{
 .eye{
     width: 25px;
     height: 25px;
-    background: black;
+    background: white;
     border-radius: 50px;
     position: absolute;
     top: 60px;
@@ -40,7 +40,7 @@ body{
 .mouth{
     width: 100px;
     height: 50px;
-    background: black;
+    background: white;
     border-radius: 0 0 50px 50px;
     position: absolute;
     bottom: 40px;
