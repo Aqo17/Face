@@ -1,37 +1,63 @@
 // Get input and mouth element
-const moodInput = document.getElementById("moodInput")
-const mouth = document.getElementById("mouth")
+        const moodInput = document.getElementById("moodInput");
+        const mouth = document.getElementById("mouth");
 
-// Listen to input changes
-moodInput.addEventListener("input", function() {
-    const mood = moodInput.value.toLowerCase().trim();
-    if (mood === 'happy') {
-        // smile (default)
-        mouth.style.height = "50px";
-        mouth.style.borderRadius ="0 0 50px 50px"
-        mouth.style.background ="white"
-        mouth.style.top = ""
-        mouth.style.bottom = "40px"
-    } else if (mood === "sad"){
-        // Sad face (frown)
-        mouth.style.height = "50px"
-        mouth.style.borderRadius = "50px 50px 0 0"
-        mouth.style.background = "white"
-        mouth.style.top = "110px"
-        mouth.style.bottom = ""
-    } else if (mood === "angry"){
-        // Flat angry mouth
-        mouth.style.height = "10px"
-        mouth.style.borderRadius = "10px"
-        mouth.style.background = "red"
-        mouth.style.top = ""
-        mouth.style.bottom = "60px"
-    } else {
-        // Neutral or unknown mood = small neutral mouth
-        mouth.style.height = "15px"
-        mouth.style.borderRadius = "10px"
-        mouth.style.background = "gray"
-        mouth.style.top = ""
-        mouth.style.bottom = "50px"
-    }
-});
+        // Listen to input changes
+        moodInput.addEventListener("input", function() {
+            const mood = moodInput.value.toLowerCase().trim();
+            
+            // Reset mouth positioning
+            mouth.style.top = "";
+            mouth.style.bottom = "";
+            
+            if (mood === 'happy') {
+                // Smile (default)
+                mouth.style.height = "50px";
+                mouth.style.width = "100px";
+                mouth.style.borderRadius = "0 0 50px 50px";
+                mouth.style.background = "black";
+                mouth.style.bottom = "40px";
+            } else if (mood === "sad") {
+                // Sad face (frown)
+                mouth.style.height = "50px";
+                mouth.style.width = "100px";
+                mouth.style.borderRadius = "50px 50px 0 0";
+                mouth.style.background = "black";
+                mouth.style.bottom = "20px";
+            } else if (mood === "angry") {
+                // Flat angry mouth
+                mouth.style.height = "8px";
+                mouth.style.width = "80px";
+                mouth.style.borderRadius = "0";
+                mouth.style.background = "red";
+                mouth.style.bottom = "50px";
+            } else if (mood === "surprised") {
+                // Surprised mouth (small circle)
+                mouth.style.height = "30px";
+                mouth.style.width = "30px";
+                mouth.style.borderRadius = "50%";
+                mouth.style.background = "black";
+                mouth.style.bottom = "45px";
+            } else if (mood === "neutral") {
+                // Neutral mouth (small horizontal line)
+                mouth.style.height = "4px";
+                mouth.style.width = "60px";
+                mouth.style.borderRadius = "2px";
+                mouth.style.background = "gray";
+                mouth.style.bottom = "50px";
+            } else {
+                // Default to neutral for unknown moods
+                mouth.style.height = "4px";
+                mouth.style.width = "60px";
+                mouth.style.borderRadius = "2px";
+                mouth.style.background = "gray";
+                mouth.style.bottom = "50px";
+            }
+        });
+
+        // Set initial neutral expression
+        mouth.style.height = "4px";
+        mouth.style.width = "60px";
+        mouth.style.borderRadius = "2px";
+        mouth.style.background = "gray";
+        mouth.style.bottom = "50px";
