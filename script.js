@@ -61,3 +61,34 @@
         mouth.style.borderRadius = "2px";
         mouth.style.background = "gray";
         mouth.style.bottom = "50px";
+
+        // Creating floating mood face
+        function showFloatingFace(mood){
+            const moodTrail = document.getElementById("moodTrail");
+            const face = document.getElementById("div");
+            face.classList.add("floating-face");
+            
+            // Emoji based on mood
+            let Emoji = "😐";
+            if (mood === "happy") Emoji ="😊"
+            else if (mood === "sad") Emoji ="😢"
+            else if (mood === "angry") Emoji ="😠"
+            face.textContent = Emoji;
+
+            // Random horizontal position
+            face.style.left = "${math.random()*(window.innerWidth - 60)}px";
+
+            moodTrail.appendChild(face);
+
+            // Remove after animation
+            setTimeout(() => {
+                moodTrail.removeChild(face);
+            }, 3000);
+        }
+        moodInput.addEventListener("input," function(){
+            const mood = moodInput.value.toLowerCase().trim();
+
+            // existing code to change
+
+            showFloatingFace(mood); 
+        });
