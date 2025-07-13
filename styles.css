@@ -1,0 +1,66 @@
+/* Reset default margin/padding */
+body{
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+    font-family: sans-serif;
+    padding-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* Main face circle */
+.face{
+    width: 200px;
+    height: 200px;
+    background: #ffe0bd;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+/* Eyes */
+.eye{
+    width: 25px;
+    height: 25px;
+    background: black;
+    border-radius: 50px;
+    position: absolute;
+    top: 60px;
+}
+/* Left eye */
+.left{
+    left: 50px;
+}
+/* Right eye */
+.right{
+    right: 50px;
+}
+/* Mouth */
+.mouth{
+    width: 100px;
+    height: 50px;
+    background: black;
+    border-radius: 0 0 50px 50px;
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    transform: translateX(-50%);
+    text-align: center;
+}
+/* Mood input */
+#moodInput{
+    margin-top: 40px;
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+input{
+    text-align: center;
+    justify-content: center;
+
+}
