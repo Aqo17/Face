@@ -65,7 +65,7 @@
         // Creating floating mood face
         function showFloatingFace(mood){
             const moodTrail = document.getElementById("moodTrail");
-            const face = document.getElementById("div");
+            const face = document.createElement("div");
             face.classList.add("floating-face");
             
             // Emoji based on mood
