@@ -85,7 +85,7 @@
                 moodTrail.removeChild(face);
             }, 3000);
         }
-        moodInput.addEventListener("input," function(){
+        moodInput.addEventListener("input", function(){
             const mood = moodInput.value.toLowerCase().trim();
 
             // existing code to change
